@@ -15,8 +15,10 @@ class PlanetRotationUseCase {
         val speedRadians = Math.toRadians(speedDegrees)
         val planetPosition = planet.position ?: PointTO(0.0, planet.sunDistance.toDouble())
 
-        val newPositionX = ((planetPosition.x * cos(speedRadians)) - (planetPosition.y * sin(speedRadians))).roundToLong()
-        val newPositionY = ((planetPosition.y * cos(speedRadians)) + (planetPosition.x * sin(speedRadians))).roundToLong()
+        val newPositionX =
+            ((planetPosition.x * cos(speedRadians)) - (planetPosition.y * sin(speedRadians))).roundToLong()
+        val newPositionY =
+            ((planetPosition.y * cos(speedRadians)) + (planetPosition.x * sin(speedRadians))).roundToLong()
 
         planet.position = PointTO(newPositionX.toDouble(), newPositionY.toDouble())
     }

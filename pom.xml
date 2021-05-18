@@ -48,7 +48,7 @@
             <version>${jackson.module.version}</version>
         </dependency>
 
-        <!-- Kotlin Libs -->
+        <!-- Kotlin -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
